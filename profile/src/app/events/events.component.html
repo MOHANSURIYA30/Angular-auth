@@ -1,0 +1,10 @@
+<div class="event-container" >
+    <h1>EVENTS</h1>
+    <div class="content" >
+        <div class="card" *ngFor="let data of eventData;let i=index" >
+            <h3>{{i+1}}.{{data.name | titlecase}}</h3>
+            <p>{{data.description}}</p>
+            <button>Join </button>
+        </div>
+    </div>
+</div>

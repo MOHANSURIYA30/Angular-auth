@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="nav-bar" >
+    <h1 class="logo">
+      MS
+    </h1>
+    <div class="event-mem" >
+      <span routerLink="events" >Event</span>
+      <span routerLink="special" > Members</span>
+    </div>
+    <div class="login-reg" >
+      <span *ngIf="!loginService.loggedIn()" routerLink="login" >Login</span>
+      <span *ngIf="!loginService.loggedIn()" routerLink="register" >Register</span>
+      <span *ngIf="loginService.loggedIn()" (click)="loginService.logOut()" >Logout</span>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
